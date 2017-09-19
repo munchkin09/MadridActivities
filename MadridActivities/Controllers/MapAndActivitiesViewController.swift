@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MapAndActivitiesViewController.swift
 //  MadridActivities
 //
 //  Created by Carlos Ledesma on 19/9/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MapAndActivitiesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
