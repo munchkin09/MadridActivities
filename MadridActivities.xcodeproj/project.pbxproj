@@ -15,6 +15,9 @@
 		28B632F91F71552D00F35212 /* MadridActivitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B632F81F71552D00F35212 /* MadridActivitiesTests.swift */; };
 		28B633051F71555000F35212 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B633041F71554F00F35212 /* CoreData.framework */; };
 		28B6330A1F715E1000F35212 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B633091F715E1000F35212 /* MapKit.framework */; };
+		28EE87A31F72C83900CCCB84 /* 101-bank.png in Resources */ = {isa = PBXBuildFile; fileRef = 28EE87A21F72C53600CCCB84 /* 101-bank.png */; };
+		28EE87A41F72C83C00CCCB84 /* 101-dumbbell.png in Resources */ = {isa = PBXBuildFile; fileRef = 28EE87A11F72C53600CCCB84 /* 101-dumbbell.png */; };
+		28EE87A61F72CA8400CCCB84 /* MapAndShopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE87A51F72CA8400CCCB84 /* MapAndShopsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		28B632FA1F71552D00F35212 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28B633041F71554F00F35212 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		28B633091F715E1000F35212 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		28EE87A11F72C53600CCCB84 /* 101-dumbbell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "101-dumbbell.png"; sourceTree = "<group>"; };
+		28EE87A21F72C53600CCCB84 /* 101-bank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "101-bank.png"; sourceTree = "<group>"; };
+		28EE87A51F72CA8400CCCB84 /* MapAndShopsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAndShopsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,11 +90,11 @@
 		28B632E21F71552D00F35212 /* MadridActivities */ = {
 			isa = PBXGroup;
 			children = (
+				28EE879A1F72C1C700CCCB84 /* Resources */,
 				28B632E31F71552D00F35212 /* AppDelegate.swift */,
 				28B633061F715C2100F35212 /* Models */,
 				28B633071F715C3D00F35212 /* Controllers */,
 				28B633081F715C4300F35212 /* Views */,
-				28B632E71F71552D00F35212 /* Main.storyboard */,
 				28B632EA1F71552D00F35212 /* Assets.xcassets */,
 				28B632EC1F71552D00F35212 /* LaunchScreen.storyboard */,
 				28B632EF1F71552D00F35212 /* Info.plist */,
@@ -125,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				28B632E51F71552D00F35212 /* MapAndActivitiesViewController.swift */,
+				28EE87A51F72CA8400CCCB84 /* MapAndShopsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -132,8 +139,18 @@
 		28B633081F715C4300F35212 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				28B632E71F71552D00F35212 /* Main.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		28EE879A1F72C1C700CCCB84 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				28EE87A21F72C53600CCCB84 /* 101-bank.png */,
+				28EE87A11F72C53600CCCB84 /* 101-dumbbell.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,7 +243,9 @@
 			files = (
 				28B632EE1F71552D00F35212 /* LaunchScreen.storyboard in Resources */,
 				28B632EB1F71552D00F35212 /* Assets.xcassets in Resources */,
+				28EE87A31F72C83900CCCB84 /* 101-bank.png in Resources */,
 				28B632E91F71552D00F35212 /* Main.storyboard in Resources */,
+				28EE87A41F72C83C00CCCB84 /* 101-dumbbell.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +265,7 @@
 			files = (
 				28B632E61F71552D00F35212 /* MapAndActivitiesViewController.swift in Sources */,
 				28B632E41F71552D00F35212 /* AppDelegate.swift in Sources */,
+				28EE87A61F72CA8400CCCB84 /* MapAndShopsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
