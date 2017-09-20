@@ -18,6 +18,9 @@
 		28EE87A31F72C83900CCCB84 /* 101-bank.png in Resources */ = {isa = PBXBuildFile; fileRef = 28EE87A21F72C53600CCCB84 /* 101-bank.png */; };
 		28EE87A41F72C83C00CCCB84 /* 101-dumbbell.png in Resources */ = {isa = PBXBuildFile; fileRef = 28EE87A11F72C53600CCCB84 /* 101-dumbbell.png */; };
 		28EE87A61F72CA8400CCCB84 /* MapAndShopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE87A51F72CA8400CCCB84 /* MapAndShopsViewController.swift */; };
+		28EE87A81F72EA1B00CCCB84 /* ShopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE87A71F72EA1B00CCCB84 /* ShopCollectionViewCell.swift */; };
+		28EE87AA1F72EDDF00CCCB84 /* ActivityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE87A91F72EDDE00CCCB84 /* ActivityCollectionViewCell.swift */; };
+		28EE87AD1F72F13E00CCCB84 /* String+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE87AC1F72F13E00CCCB84 /* String+Image.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		28EE87A11F72C53600CCCB84 /* 101-dumbbell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "101-dumbbell.png"; sourceTree = "<group>"; };
 		28EE87A21F72C53600CCCB84 /* 101-bank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "101-bank.png"; sourceTree = "<group>"; };
 		28EE87A51F72CA8400CCCB84 /* MapAndShopsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAndShopsViewController.swift; sourceTree = "<group>"; };
+		28EE87A71F72EA1B00CCCB84 /* ShopCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCollectionViewCell.swift; sourceTree = "<group>"; };
+		28EE87A91F72EDDE00CCCB84 /* ActivityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCollectionViewCell.swift; sourceTree = "<group>"; };
+		28EE87AC1F72F13E00CCCB84 /* String+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Image.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +96,7 @@
 		28B632E21F71552D00F35212 /* MadridActivities */ = {
 			isa = PBXGroup;
 			children = (
-				28EE879A1F72C1C700CCCB84 /* Resources */,
+				28EE87AB1F72F13000CCCB84 /* Utils */,
 				28B632E31F71552D00F35212 /* AppDelegate.swift */,
 				28B633061F715C2100F35212 /* Models */,
 				28B633071F715C3D00F35212 /* Controllers */,
@@ -98,6 +104,7 @@
 				28B632EA1F71552D00F35212 /* Assets.xcassets */,
 				28B632EC1F71552D00F35212 /* LaunchScreen.storyboard */,
 				28B632EF1F71552D00F35212 /* Info.plist */,
+				28EE879A1F72C1C700CCCB84 /* Resources */,
 			);
 			path = MadridActivities;
 			sourceTree = "<group>";
@@ -140,6 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				28B632E71F71552D00F35212 /* Main.storyboard */,
+				28EE87A71F72EA1B00CCCB84 /* ShopCollectionViewCell.swift */,
+				28EE87A91F72EDDE00CCCB84 /* ActivityCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,6 +160,14 @@
 				28EE87A11F72C53600CCCB84 /* 101-dumbbell.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		28EE87AB1F72F13000CCCB84 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				28EE87AC1F72F13E00CCCB84 /* String+Image.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,7 +280,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28EE87AA1F72EDDF00CCCB84 /* ActivityCollectionViewCell.swift in Sources */,
+				28EE87AD1F72F13E00CCCB84 /* String+Image.swift in Sources */,
 				28B632E61F71552D00F35212 /* MapAndActivitiesViewController.swift in Sources */,
+				28EE87A81F72EA1B00CCCB84 /* ShopCollectionViewCell.swift in Sources */,
 				28B632E41F71552D00F35212 /* AppDelegate.swift in Sources */,
 				28EE87A61F72CA8400CCCB84 /* MapAndShopsViewController.swift in Sources */,
 			);

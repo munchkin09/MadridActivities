@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import MapKit
+
 
 class MapAndActivitiesViewController: UIViewController {
 
+    @IBOutlet weak var mapActivities: MKMapView!
+    
+    @IBOutlet weak var collectionViewActivities: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
