@@ -8,22 +8,26 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 
 class MapAndActivitiesViewController: UIViewController {
 
-    @IBOutlet weak var mapActivities: MKMapView!
+    @IBOutlet weak var collectionActivities: UICollectionView!
     
-    @IBOutlet weak var collectionViewActivities: UICollectionView!
+    @IBOutlet weak var mapActivities: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        //self.collectionViewActivities.dataSource = self
+        //self.collectionViewActivities.delegate = self
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
 
 

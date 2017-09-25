@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 func parseShops(data: Data) -> Shops {
     let shops = Shops()
     
@@ -22,16 +21,21 @@ func parseShops(data: Data) -> Shops {
             shop.description = shopJson["description_en"]! as! String
             shop.logo = shopJson["logo_img"] as! String
             shop.image = shopJson["img"] as! String
+            var trimmString = shopJson["gps_lat"] as! String
+            shop.latitude = Float(trimmString.trimmingCharacters(in: .whitespaces))
+            trimmString = shopJson["gps_lon"] as! String
+            shop.longitude = Float(trimmString.trimmingCharacters(in: .whitespaces))
             shops.add(shop: shop)
         }
+        
     } catch {
         
     }
     return shops
 }
 
-func parseActivities(data: Data) -> Shops {
-    let shops = Shops()
+func parseActivities(data: Data) -> Activities {
+    let activities = Activities()
     do {
         let jsonObject = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! Dictionary<String, Any>
         let result = jsonObject["result"] as! [Dictionary<String,Any>]
@@ -47,5 +51,5 @@ func parseActivities(data: Data) -> Shops {
     } catch {
         
     }
-    return shops
+    return activities
 }

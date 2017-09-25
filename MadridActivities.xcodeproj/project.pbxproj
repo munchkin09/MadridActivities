@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28151F271F79159200E23CAF /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE87BA1F7300E700CCCB84 /* JSONParser.swift */; };
+		28151F2A1F791A1F00E23CAF /* DownloadAllShopsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28151F291F791A1F00E23CAF /* DownloadAllShopsInteractor.swift */; };
+		28151F2C1F791A3A00E23CAF /* DownloadAllActivitiesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28151F2B1F791A3A00E23CAF /* DownloadAllActivitiesInteractor.swift */; };
+		28151F2E1F791A8400E23CAF /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28151F2D1F791A8400E23CAF /* Typealias.swift */; };
+		28151F301F791E2C00E23CAF /* DownloadAllShopsInteractorNSURLSessionImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28151F2F1F791E2C00E23CAF /* DownloadAllShopsInteractorNSURLSessionImpl.swift */; };
+		28151F321F791E5700E23CAF /* DownloadAllActivitiesInteractorNSURLSessionImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28151F311F791E5700E23CAF /* DownloadAllActivitiesInteractorNSURLSessionImpl.swift */; };
+		28769C141F73D55300D472C4 /* MapAndActivitiesViewController+CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28769C131F73D55300D472C4 /* MapAndActivitiesViewController+CollectionViewController.swift */; };
 		28B632E41F71552D00F35212 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B632E31F71552D00F35212 /* AppDelegate.swift */; };
 		28B632E61F71552D00F35212 /* MapAndActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B632E51F71552D00F35212 /* MapAndActivitiesViewController.swift */; };
 		28B632E91F71552D00F35212 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28B632E71F71552D00F35212 /* Main.storyboard */; };
@@ -40,6 +47,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28151F291F791A1F00E23CAF /* DownloadAllShopsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAllShopsInteractor.swift; sourceTree = "<group>"; };
+		28151F2B1F791A3A00E23CAF /* DownloadAllActivitiesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAllActivitiesInteractor.swift; sourceTree = "<group>"; };
+		28151F2D1F791A8400E23CAF /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
+		28151F2F1F791E2C00E23CAF /* DownloadAllShopsInteractorNSURLSessionImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAllShopsInteractorNSURLSessionImpl.swift; sourceTree = "<group>"; };
+		28151F311F791E5700E23CAF /* DownloadAllActivitiesInteractorNSURLSessionImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAllActivitiesInteractorNSURLSessionImpl.swift; sourceTree = "<group>"; };
+		28769C131F73D55300D472C4 /* MapAndActivitiesViewController+CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapAndActivitiesViewController+CollectionViewController.swift"; sourceTree = "<group>"; };
 		28B632E01F71552D00F35212 /* MadridActivities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MadridActivities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B632E31F71552D00F35212 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28B632E51F71552D00F35212 /* MapAndActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAndActivitiesViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +101,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28151F281F7919F000E23CAF /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				28151F291F791A1F00E23CAF /* DownloadAllShopsInteractor.swift */,
+				28151F2B1F791A3A00E23CAF /* DownloadAllActivitiesInteractor.swift */,
+				28151F2F1F791E2C00E23CAF /* DownloadAllShopsInteractorNSURLSessionImpl.swift */,
+				28151F311F791E5700E23CAF /* DownloadAllActivitiesInteractorNSURLSessionImpl.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
 		28B632D71F71552D00F35212 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +167,7 @@
 		28B633061F715C2100F35212 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				28151F281F7919F000E23CAF /* Interactors */,
 				28EE87B81F7300B500CCCB84 /* JSonParser */,
 				28EE87B71F7300AC00CCCB84 /* Mappers */,
 				28EE87B01F72F60600CCCB84 /* Activity.swift */,
@@ -159,6 +184,7 @@
 			children = (
 				28B632E51F71552D00F35212 /* MapAndActivitiesViewController.swift */,
 				28EE87A51F72CA8400CCCB84 /* MapAndShopsViewController.swift */,
+				28769C131F73D55300D472C4 /* MapAndActivitiesViewController+CollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -187,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				28EE87AC1F72F13E00CCCB84 /* String+Image.swift */,
+				28151F2D1F791A8400E23CAF /* Typealias.swift */,
 				28EE87AE1F72F50D00CCCB84 /* CoreDataStack.swift */,
 			);
 			path = Utils;
@@ -319,8 +346,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				28EE87AF1F72F50D00CCCB84 /* CoreDataStack.swift in Sources */,
+				28151F2C1F791A3A00E23CAF /* DownloadAllActivitiesInteractor.swift in Sources */,
 				28EE87AA1F72EDDF00CCCB84 /* ActivityCollectionViewCell.swift in Sources */,
+				28151F271F79159200E23CAF /* JSONParser.swift in Sources */,
+				28151F301F791E2C00E23CAF /* DownloadAllShopsInteractorNSURLSessionImpl.swift in Sources */,
 				28EE87BC1F73031000CCCB84 /* Shops.swift in Sources */,
+				28151F321F791E5700E23CAF /* DownloadAllActivitiesInteractorNSURLSessionImpl.swift in Sources */,
+				28151F2A1F791A1F00E23CAF /* DownloadAllShopsInteractor.swift in Sources */,
 				28EE87AD1F72F13E00CCCB84 /* String+Image.swift in Sources */,
 				28B632E61F71552D00F35212 /* MapAndActivitiesViewController.swift in Sources */,
 				28EE87A81F72EA1B00CCCB84 /* ShopCollectionViewCell.swift in Sources */,
@@ -328,8 +360,10 @@
 				28EE87B31F72F76D00CCCB84 /* Shop.swift in Sources */,
 				28EE87BE1F7309DD00CCCB84 /* Activities.swift in Sources */,
 				28EE87B61F72FA7F00CCCB84 /* MadridShopsActivities.xcdatamodeld in Sources */,
+				28151F2E1F791A8400E23CAF /* Typealias.swift in Sources */,
 				28EE87B11F72F60600CCCB84 /* Activity.swift in Sources */,
 				28EE87A61F72CA8400CCCB84 /* MapAndShopsViewController.swift in Sources */,
+				28769C141F73D55300D472C4 /* MapAndActivitiesViewController+CollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
