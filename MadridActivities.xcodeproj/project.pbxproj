@@ -14,6 +14,7 @@
 		28151F301F791E2C00E23CAF /* DownloadAllShopsInteractorNSURLSessionImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28151F2F1F791E2C00E23CAF /* DownloadAllShopsInteractorNSURLSessionImpl.swift */; };
 		28151F321F791E5700E23CAF /* DownloadAllActivitiesInteractorNSURLSessionImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28151F311F791E5700E23CAF /* DownloadAllActivitiesInteractorNSURLSessionImpl.swift */; };
 		28769C141F73D55300D472C4 /* MapAndActivitiesViewController+CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28769C131F73D55300D472C4 /* MapAndActivitiesViewController+CollectionViewController.swift */; };
+		28B481DB1F79A2F500A0B0D8 /* MapShops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE87B91F7300D900CCCB84 /* MapShops.swift */; };
 		28B632E41F71552D00F35212 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B632E31F71552D00F35212 /* AppDelegate.swift */; };
 		28B632E61F71552D00F35212 /* MapAndActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B632E51F71552D00F35212 /* MapAndActivitiesViewController.swift */; };
 		28B632E91F71552D00F35212 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28B632E71F71552D00F35212 /* Main.storyboard */; };
@@ -34,6 +35,14 @@
 		28EE87B61F72FA7F00CCCB84 /* MadridShopsActivities.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28EE87B41F72FA7E00CCCB84 /* MadridShopsActivities.xcdatamodeld */; };
 		28EE87BC1F73031000CCCB84 /* Shops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE87BB1F73030D00CCCB84 /* Shops.swift */; };
 		28EE87BE1F7309DD00CCCB84 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE87BD1F7309DC00CCCB84 /* Activities.swift */; };
+		28F03F381F7A5917004867E8 /* MapAndShopsViewController+CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F03F371F7A5917004867E8 /* MapAndShopsViewController+CollectionViewController.swift */; };
+		28F03F401F7A5AC2004867E8 /* SetExecutedOnceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F03F3C1F7A5AC1004867E8 /* SetExecutedOnceInteractor.swift */; };
+		28F03F411F7A5AC2004867E8 /* SetExecutedOnceInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F03F3D1F7A5AC1004867E8 /* SetExecutedOnceInteractorImpl.swift */; };
+		28F03F421F7A5AC2004867E8 /* ExecuteOnceInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F03F3E1F7A5AC1004867E8 /* ExecuteOnceInteractorImpl.swift */; };
+		28F03F431F7A5AC2004867E8 /* ExecuteOnceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F03F3F1F7A5AC2004867E8 /* ExecuteOnceInteractor.swift */; };
+		28F03F441F7A5B3A004867E8 /* SaveAllShopsInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F03F3B1F7A5AA3004867E8 /* SaveAllShopsInteractorImpl.swift */; };
+		28F03F451F7A5B40004867E8 /* SaveAllShopsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F03F3A1F7A5A93004867E8 /* SaveAllShopsInteractor.swift */; };
+		28F03F471F7A677E004867E8 /* ShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F03F461F7A677E004867E8 /* ShopDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +88,14 @@
 		28EE87BA1F7300E700CCCB84 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		28EE87BB1F73030D00CCCB84 /* Shops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shops.swift; sourceTree = "<group>"; };
 		28EE87BD1F7309DC00CCCB84 /* Activities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
+		28F03F371F7A5917004867E8 /* MapAndShopsViewController+CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapAndShopsViewController+CollectionViewController.swift"; sourceTree = "<group>"; };
+		28F03F3A1F7A5A93004867E8 /* SaveAllShopsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAllShopsInteractor.swift; sourceTree = "<group>"; };
+		28F03F3B1F7A5AA3004867E8 /* SaveAllShopsInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAllShopsInteractorImpl.swift; sourceTree = "<group>"; };
+		28F03F3C1F7A5AC1004867E8 /* SetExecutedOnceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetExecutedOnceInteractor.swift; sourceTree = "<group>"; };
+		28F03F3D1F7A5AC1004867E8 /* SetExecutedOnceInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetExecutedOnceInteractorImpl.swift; sourceTree = "<group>"; };
+		28F03F3E1F7A5AC1004867E8 /* ExecuteOnceInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteOnceInteractorImpl.swift; sourceTree = "<group>"; };
+		28F03F3F1F7A5AC2004867E8 /* ExecuteOnceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteOnceInteractor.swift; sourceTree = "<group>"; };
+		28F03F461F7A677E004867E8 /* ShopDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,10 +121,15 @@
 		28151F281F7919F000E23CAF /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
+				28F03F391F7A5A4E004867E8 /* CacheInteractors */,
 				28151F291F791A1F00E23CAF /* DownloadAllShopsInteractor.swift */,
 				28151F2B1F791A3A00E23CAF /* DownloadAllActivitiesInteractor.swift */,
 				28151F2F1F791E2C00E23CAF /* DownloadAllShopsInteractorNSURLSessionImpl.swift */,
 				28151F311F791E5700E23CAF /* DownloadAllActivitiesInteractorNSURLSessionImpl.swift */,
+				28F03F3F1F7A5AC2004867E8 /* ExecuteOnceInteractor.swift */,
+				28F03F3E1F7A5AC1004867E8 /* ExecuteOnceInteractorImpl.swift */,
+				28F03F3C1F7A5AC1004867E8 /* SetExecutedOnceInteractor.swift */,
+				28F03F3D1F7A5AC1004867E8 /* SetExecutedOnceInteractorImpl.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -185,6 +207,8 @@
 				28B632E51F71552D00F35212 /* MapAndActivitiesViewController.swift */,
 				28EE87A51F72CA8400CCCB84 /* MapAndShopsViewController.swift */,
 				28769C131F73D55300D472C4 /* MapAndActivitiesViewController+CollectionViewController.swift */,
+				28F03F371F7A5917004867E8 /* MapAndShopsViewController+CollectionViewController.swift */,
+				28F03F461F7A677E004867E8 /* ShopDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -233,6 +257,15 @@
 				28EE87BA1F7300E700CCCB84 /* JSONParser.swift */,
 			);
 			path = JSonParser;
+			sourceTree = "<group>";
+		};
+		28F03F391F7A5A4E004867E8 /* CacheInteractors */ = {
+			isa = PBXGroup;
+			children = (
+				28F03F3A1F7A5A93004867E8 /* SaveAllShopsInteractor.swift */,
+				28F03F3B1F7A5AA3004867E8 /* SaveAllShopsInteractorImpl.swift */,
+			);
+			path = CacheInteractors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,22 +379,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				28EE87AF1F72F50D00CCCB84 /* CoreDataStack.swift in Sources */,
+				28F03F401F7A5AC2004867E8 /* SetExecutedOnceInteractor.swift in Sources */,
 				28151F2C1F791A3A00E23CAF /* DownloadAllActivitiesInteractor.swift in Sources */,
 				28EE87AA1F72EDDF00CCCB84 /* ActivityCollectionViewCell.swift in Sources */,
 				28151F271F79159200E23CAF /* JSONParser.swift in Sources */,
 				28151F301F791E2C00E23CAF /* DownloadAllShopsInteractorNSURLSessionImpl.swift in Sources */,
 				28EE87BC1F73031000CCCB84 /* Shops.swift in Sources */,
 				28151F321F791E5700E23CAF /* DownloadAllActivitiesInteractorNSURLSessionImpl.swift in Sources */,
+				28F03F381F7A5917004867E8 /* MapAndShopsViewController+CollectionViewController.swift in Sources */,
 				28151F2A1F791A1F00E23CAF /* DownloadAllShopsInteractor.swift in Sources */,
+				28B481DB1F79A2F500A0B0D8 /* MapShops.swift in Sources */,
 				28EE87AD1F72F13E00CCCB84 /* String+Image.swift in Sources */,
+				28F03F451F7A5B40004867E8 /* SaveAllShopsInteractor.swift in Sources */,
 				28B632E61F71552D00F35212 /* MapAndActivitiesViewController.swift in Sources */,
 				28EE87A81F72EA1B00CCCB84 /* ShopCollectionViewCell.swift in Sources */,
 				28B632E41F71552D00F35212 /* AppDelegate.swift in Sources */,
+				28F03F421F7A5AC2004867E8 /* ExecuteOnceInteractorImpl.swift in Sources */,
+				28F03F431F7A5AC2004867E8 /* ExecuteOnceInteractor.swift in Sources */,
 				28EE87B31F72F76D00CCCB84 /* Shop.swift in Sources */,
+				28F03F441F7A5B3A004867E8 /* SaveAllShopsInteractorImpl.swift in Sources */,
 				28EE87BE1F7309DD00CCCB84 /* Activities.swift in Sources */,
 				28EE87B61F72FA7F00CCCB84 /* MadridShopsActivities.xcdatamodeld in Sources */,
 				28151F2E1F791A8400E23CAF /* Typealias.swift in Sources */,
+				28F03F411F7A5AC2004867E8 /* SetExecutedOnceInteractorImpl.swift in Sources */,
 				28EE87B11F72F60600CCCB84 /* Activity.swift in Sources */,
+				28F03F471F7A677E004867E8 /* ShopDetailViewController.swift in Sources */,
 				28EE87A61F72CA8400CCCB84 /* MapAndShopsViewController.swift in Sources */,
 				28769C141F73D55300D472C4 /* MapAndActivitiesViewController+CollectionViewController.swift in Sources */,
 			);

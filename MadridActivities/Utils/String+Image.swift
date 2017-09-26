@@ -21,11 +21,11 @@ extension String {
                     imageView.image = image
                 }
             }
-            
-            
-            
-            
         }
+    }
+    
+    func trimAndConvertToFloat() -> Float {
+        return Float(self.trimmingCharacters(in: .whitespaces)) ?? 0.0
     }
     
 }

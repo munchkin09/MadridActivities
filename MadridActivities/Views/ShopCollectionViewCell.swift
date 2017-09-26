@@ -10,18 +10,22 @@ import UIKit
 
 class ShopCollectionViewCell: UICollectionViewCell {
     
+    var shop : Shop?
+    
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var opHoursLabel: UILabel!
     
     @IBOutlet weak var logoImage: UIImageView!
     
-    func refresh(activity: Activity) {
-        /*self.shop = shop
+    
+    func refresh(shop: Shop) {
+        self.shop = shop
          
          //
-         self.nameLabel.text = shop.name
+         self.titleLabel.text = shop.name
+         self.opHoursLabel.text = shop.openingHours
          //TODO: image view
-         self.shop?.logo.loadImage(into: self.shopImage)*/
+         self.shop?.logo.loadImage(into: self.logoImage)
     }
 }

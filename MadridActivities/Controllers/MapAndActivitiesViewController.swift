@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import CoreData
 import MapKit
 import CoreLocation
 
 
 class MapAndActivitiesViewController: UIViewController {
 
+    var context : NSManagedObjectContext!
+    
     @IBOutlet weak var collectionActivities: UICollectionView!
     
     @IBOutlet weak var mapActivities: MKMapView!

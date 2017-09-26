@@ -21,11 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         self.context = cds.createContainter(dbName: "MadridShopsActivities").viewContext
-        /*let roto2 = "O|o"
         let tabBar = self.window?.rootViewController as! UITabBarController
-        let nav = tabBar.viewControllers![0] as! UINavigationController
-        let mapAndActivitiesVC = nav.topViewController as! MapAndActivitiesViewController
-        print("\(mapAndActivitiesVC.title ?? roto2)")*/
+        let navActivities = tabBar.viewControllers![0] as! UINavigationController
+        let mapAndActivitiesVC = navActivities.topViewController as! MapAndActivitiesViewController
+        let navShops = tabBar.viewControllers![1] as! UINavigationController
+        let mapAndShopsVC = navShops.topViewController as! MapAndShopsViewController
+        mapAndShopsVC.context = context
+        mapAndActivitiesVC.context = context
+        
+        /*print("\(mapAndActivitiesVC.title ?? roto2)")*/
         return true
     }
 

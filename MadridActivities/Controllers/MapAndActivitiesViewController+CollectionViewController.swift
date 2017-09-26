@@ -10,6 +10,10 @@ import UIKit
 
 extension MapAndActivitiesViewController : UICollectionViewDelegate, UICollectionViewDataSource {
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 0
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 0
     }
@@ -19,7 +23,6 @@ extension MapAndActivitiesViewController : UICollectionViewDelegate, UICollectio
         let cell : ActivityCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ActivityCell", for: indexPath) as! ActivityCollectionViewCell
         
         //cell.refresh(activity: <#T##Activity#>)
-        
         return cell
     }
         
