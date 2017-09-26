@@ -43,6 +43,7 @@
 		28F03F441F7A5B3A004867E8 /* SaveAllShopsInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F03F3B1F7A5AA3004867E8 /* SaveAllShopsInteractorImpl.swift */; };
 		28F03F451F7A5B40004867E8 /* SaveAllShopsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F03F3A1F7A5A93004867E8 /* SaveAllShopsInteractor.swift */; };
 		28F03F471F7A677E004867E8 /* ShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F03F461F7A677E004867E8 /* ShopDetailViewController.swift */; };
+		28F03F491F7A8951004867E8 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F03F481F7A8951004867E8 /* Note.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		28F03F3E1F7A5AC1004867E8 /* ExecuteOnceInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteOnceInteractorImpl.swift; sourceTree = "<group>"; };
 		28F03F3F1F7A5AC2004867E8 /* ExecuteOnceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteOnceInteractor.swift; sourceTree = "<group>"; };
 		28F03F461F7A677E004867E8 /* ShopDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailViewController.swift; sourceTree = "<group>"; };
+		28F03F481F7A8951004867E8 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 				28B632EC1F71552D00F35212 /* LaunchScreen.storyboard */,
 				28EE87A71F72EA1B00CCCB84 /* ShopCollectionViewCell.swift */,
 				28EE87A91F72EDDE00CCCB84 /* ActivityCollectionViewCell.swift */,
+				28F03F481F7A8951004867E8 /* Note.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				28B632E41F71552D00F35212 /* AppDelegate.swift in Sources */,
 				28F03F421F7A5AC2004867E8 /* ExecuteOnceInteractorImpl.swift in Sources */,
 				28F03F431F7A5AC2004867E8 /* ExecuteOnceInteractor.swift in Sources */,
+				28F03F491F7A8951004867E8 /* Note.swift in Sources */,
 				28EE87B31F72F76D00CCCB84 /* Shop.swift in Sources */,
 				28F03F441F7A5B3A004867E8 /* SaveAllShopsInteractorImpl.swift in Sources */,
 				28EE87BE1F7309DD00CCCB84 /* Activities.swift in Sources */,

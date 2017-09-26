@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import MapKit
+
 
 extension MapAndShopsViewController : UICollectionViewDelegate,UICollectionViewDataSource {
     
@@ -23,6 +25,11 @@ extension MapAndShopsViewController : UICollectionViewDelegate,UICollectionViewD
         
         let shopCD : ShopCD = fetchedResultsController.object(at: indexPath)
         
+        let shopLocation = CLLocation(latitude: CLLocationDegrees(shopCD.latitude), longitude: CLLocationDegrees(shopCD.longitude))
+        
+        
+        let note = Note(coordinate: shopLocation.coordinate, title: shopCD.name!, subtitle: "")
+        self.mapShops.addAnnotation(note)
         cell.refresh(shop: mapShopCDIntoShop(shopCD: shopCD))
         return cell
     }

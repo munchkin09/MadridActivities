@@ -35,7 +35,7 @@ class MapAndShopsViewController: UIViewController, CLLocationManagerDelegate {
         self.collectionShops.delegate = self
         self.collectionShops.dataSource = self
         
-        let madridLocation = CLLocation(latitude: 40.41889, longitude: -3.69194)
+        let madridLocation = CLLocation(latitude: 40.416418, longitude: -3.703410)
         self.mapShops.setCenter(madridLocation.coordinate, animated: true)
     }
 
@@ -114,7 +114,7 @@ class MapAndShopsViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
         
-        self.mapShops.setCenter(location.coordinate, animated: true)
+        //self.mapShops.setCenter(location.coordinate, animated: true)
     }
     
 }
