@@ -4,11 +4,12 @@
 //
 //  Created by Carlos Ledesma on 12/9/17.
 //  Copyright © 2017 Carlos Ledesma. All rights reserved.
-//
+//  ¯\_(ツ)_/¯
 
 import Foundation
 
 func parseShops(data: Data) -> Shops {
+    let preferredLang = NSLocale.preferredLanguages[0]
     let shops = Shops()
     
     do {
@@ -18,10 +19,16 @@ func parseShops(data: Data) -> Shops {
         for shopJson in result {
             let shop = Shop(name: shopJson["name"]! as! String)
             shop.address = shopJson["address"]! as! String
-            shop.description = shopJson["description_en"]! as! String
+            if preferredLang == "es-ES" {
+                shop.description = shopJson["description_es"]! as! String
+                shop.openingHours = shopJson["opening_hours_es"] as! String
+            } else {
+                shop.description = shopJson["description_en"]! as! String
+                shop.openingHours = shopJson["opening_hours_en"] as! String
+            }
             shop.logo = shopJson["logo_img"] as! String
             shop.image = shopJson["img"] as! String
-            shop.openingHours = shopJson["opening_hours_en"] as! String
+            
             shop.latitude = (shopJson["gps_lat"] as! String).trimAndConvertToFloat()
             shop.longitude = (shopJson["gps_lon"] as! String).trimAndConvertToFloat()
             shops.add(shop: shop)
