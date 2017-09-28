@@ -26,7 +26,4 @@ class SaveAllShopsInteractorImpl : SaveAllShopsInteractor {
             
         }
     }
-    
-   
-    
 }

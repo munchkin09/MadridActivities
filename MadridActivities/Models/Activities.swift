@@ -31,9 +31,7 @@ public class Activities : ActivitiesProtocol {
     }
 
     func get(atIndex: Int) -> Activity {
-        
-        let act = Activity(name:"churi")
-        return act
+        return (activitiesList?[atIndex])!
     }
 
     

@@ -7,22 +7,30 @@
 //
 
 import UIKit
+import CoreLocation
 
 extension MapAndActivitiesViewController : UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 0
+        return fetchedResultsController.sections?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        let sectionInfo = fetchedResultsController.sections![section]
+        return sectionInfo.numberOfObjects
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell : ActivityCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ActivityCell", for: indexPath) as! ActivityCollectionViewCell
+        let activityCD : ActivityCD = fetchedResultsController.object(at: indexPath)
         
-        //cell.refresh(activity: <#T##Activity#>)
+        let shopLocation = CLLocation(latitude: CLLocationDegrees(activityCD.latitude), longitude: CLLocationDegrees(activityCD.longitude))
+        
+        
+        let note = Note(coordinate: shopLocation.coordinate, title: activityCD.name!, subtitle: "")
+        self.mapActivities.addAnnotation(note)
+        cell.refresh(activity: mapActivityCDIntoActivity(activityCD: activityCD))
         return cell
     }
         

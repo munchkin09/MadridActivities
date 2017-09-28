@@ -7,5 +7,5 @@
 //
 
 protocol ExecuteOnceInteractor {
-    func execute(closure: () -> Void)
+    func execute(forKey: String, closure: () -> Void)
 }

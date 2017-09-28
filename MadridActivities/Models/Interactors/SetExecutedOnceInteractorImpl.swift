@@ -9,10 +9,10 @@
 import Foundation
 
 class SetExecutedOnceInteractorImpl : SetExecutedOnceInteractor {
-    func execute() {
+    func execute(forKey: String) {
         let defaults = UserDefaults.standard
         
-        defaults.set("SAVED", forKey: "once")
+        defaults.set("SAVED", forKey: forKey)
         
         defaults.synchronize()
     }

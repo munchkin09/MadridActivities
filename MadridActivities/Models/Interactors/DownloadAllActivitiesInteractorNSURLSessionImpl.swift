@@ -13,6 +13,7 @@ class DownloadAllActivitiesInteractorNSURLSessionImpl : DownloadAllActivitiesInt
     func execute(onSuccess: @escaping (Activities) -> Void, onError: errorClosure) {
         let session = URLSession.shared
         if let url = URL(string: "https://madrid-shops.com/json_new/getActivities.php") {
+            
             let task = session.dataTask(with: url) { (data: Data?, response: URLResponse?, err: Error?) in
                 
                 OperationQueue.main.addOperation {

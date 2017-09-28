@@ -29,7 +29,7 @@ class MapAndShopsViewController: UIViewController, CLLocationManagerDelegate {
         self.locationManager.delegate = self
         self.locationManager.startUpdatingLocation()
         // Do any additional setup after loading the view.
-        ExecuteOnceInteractorImpl().execute {
+        ExecuteOnceInteractorImpl().execute(forKey: "once_shops") {
             initializeData()
         }
         self.collectionShops.delegate = self
@@ -52,7 +52,7 @@ class MapAndShopsViewController: UIViewController, CLLocationManagerDelegate {
             let cacheInteractor = SaveAllShopsInteractorImpl()
             
             cacheInteractor.execute(shops: shops, context: self.context, onSuccess: { (shops: Shops) in
-                SetExecutedOnceInteractorImpl().execute()
+                SetExecutedOnceInteractorImpl().execute(forKey: "once_shops")
                 
                 self._fetchedResultsController = nil
                 self.collectionShops.delegate = self

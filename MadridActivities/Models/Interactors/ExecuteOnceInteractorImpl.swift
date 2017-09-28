@@ -10,9 +10,9 @@ import Foundation
 
 
 class ExecuteOnceInteractorImpl : ExecuteOnceInteractor {
-    func execute(closure: () -> Void) {
+    func execute(forKey: String, closure: () -> Void) {
         let defaults = UserDefaults.standard
-        if let _ = defaults.string(forKey: "once") {
+        if let _ = defaults.string(forKey: forKey) {
             // do nothing, already saved
         } else {
             closure()

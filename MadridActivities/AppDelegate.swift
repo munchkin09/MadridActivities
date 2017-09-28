@@ -29,7 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         mapAndShopsVC.context = context
         mapAndActivitiesVC.context = context
         
-        /*print("\(mapAndActivitiesVC.title ?? roto2)")*/
         return true
     }
 

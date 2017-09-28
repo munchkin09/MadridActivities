@@ -10,6 +10,7 @@ import UIKit
 
 class ActivityCollectionViewCell: UICollectionViewCell {
     
+    var activity : Activity?
     @IBOutlet weak var activityImage: UIImageView!
   
     @IBOutlet weak var activityNameLabel: UILabel!
@@ -17,11 +18,12 @@ class ActivityCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var activityOpeningLabel: UILabel!
     
     func refresh(activity: Activity) {
-        /*self.shop = shop
-        
-        //
-        self.nameLabel.text = shop.name
+        self.activity = activity
+ 
+ 
+        self.activityNameLabel.text = self.activity?.name
+        self.activityOpeningLabel.text = self.activity?.openingHours
         //TODO: image view
-        self.shop?.logo.loadImage(into: self.shopImage)*/
+        self.activity?.logo.loadImage(into: self.activityImage)
     }
 }
