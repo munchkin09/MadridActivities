@@ -26,6 +26,8 @@
 		28B93D4E1F7CFBBF00343355 /* MapActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B93D4D1F7CFBBF00343355 /* MapActivities.swift */; };
 		28B93D501F7D061C00343355 /* SaveAllActivitiesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B93D4F1F7D061C00343355 /* SaveAllActivitiesInteractor.swift */; };
 		28B93D521F7D068800343355 /* SaveAllActivitiesInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B93D511F7D068800343355 /* SaveAllActivitiesInteractorImpl.swift */; };
+		28B93D541F7D283500343355 /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B93D531F7D283500343355 /* ActivityDetailViewController.swift */; };
+		28B93D561F7D37DB00343355 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 28B93D551F7D37DB00343355 /* Podfile */; };
 		28EE87A31F72C83900CCCB84 /* 101-bank.png in Resources */ = {isa = PBXBuildFile; fileRef = 28EE87A21F72C53600CCCB84 /* 101-bank.png */; };
 		28EE87A41F72C83C00CCCB84 /* 101-dumbbell.png in Resources */ = {isa = PBXBuildFile; fileRef = 28EE87A11F72C53600CCCB84 /* 101-dumbbell.png */; };
 		28EE87A61F72CA8400CCCB84 /* MapAndShopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE87A51F72CA8400CCCB84 /* MapAndShopsViewController.swift */; };
@@ -47,6 +49,7 @@
 		28F03F451F7A5B40004867E8 /* SaveAllShopsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F03F3A1F7A5A93004867E8 /* SaveAllShopsInteractor.swift */; };
 		28F03F471F7A677E004867E8 /* ShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F03F461F7A677E004867E8 /* ShopDetailViewController.swift */; };
 		28F03F491F7A8951004867E8 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F03F481F7A8951004867E8 /* Note.swift */; };
+		DE29DF0EFEDAB36CD194CDDB /* Pods_MadridActivities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC12F502C1676F6AF8978C9 /* Pods_MadridActivities.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,8 @@
 		28B93D4D1F7CFBBF00343355 /* MapActivities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapActivities.swift; sourceTree = "<group>"; };
 		28B93D4F1F7D061C00343355 /* SaveAllActivitiesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAllActivitiesInteractor.swift; sourceTree = "<group>"; };
 		28B93D511F7D068800343355 /* SaveAllActivitiesInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAllActivitiesInteractorImpl.swift; sourceTree = "<group>"; };
+		28B93D531F7D283500343355 /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
+		28B93D551F7D37DB00343355 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		28EE87A11F72C53600CCCB84 /* 101-dumbbell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "101-dumbbell.png"; sourceTree = "<group>"; };
 		28EE87A21F72C53600CCCB84 /* 101-bank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "101-bank.png"; sourceTree = "<group>"; };
 		28EE87A51F72CA8400CCCB84 /* MapAndShopsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAndShopsViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +109,9 @@
 		28F03F3F1F7A5AC2004867E8 /* ExecuteOnceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteOnceInteractor.swift; sourceTree = "<group>"; };
 		28F03F461F7A677E004867E8 /* ShopDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailViewController.swift; sourceTree = "<group>"; };
 		28F03F481F7A8951004867E8 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		7A174227347737E77AF543C2 /* Pods-MadridActivities.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MadridActivities.release.xcconfig"; path = "Pods/Target Support Files/Pods-MadridActivities/Pods-MadridActivities.release.xcconfig"; sourceTree = "<group>"; };
+		DDC12F502C1676F6AF8978C9 /* Pods_MadridActivities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MadridActivities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD72FFE6371F375D0261A2A7 /* Pods-MadridActivities.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MadridActivities.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MadridActivities/Pods-MadridActivities.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +121,7 @@
 			files = (
 				28B6330A1F715E1000F35212 /* MapKit.framework in Frameworks */,
 				28B633051F71555000F35212 /* CoreData.framework in Frameworks */,
+				DE29DF0EFEDAB36CD194CDDB /* Pods_MadridActivities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,10 +154,12 @@
 		28B632D71F71552D00F35212 = {
 			isa = PBXGroup;
 			children = (
+				28B93D551F7D37DB00343355 /* Podfile */,
 				28B632E21F71552D00F35212 /* MadridActivities */,
 				28B632F71F71552D00F35212 /* MadridActivitiesTests */,
 				28B632E11F71552D00F35212 /* Products */,
 				28B633031F71554F00F35212 /* Frameworks */,
+				BB04C3D2804A8FA88412EED1 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -190,6 +201,7 @@
 			children = (
 				28B633091F715E1000F35212 /* MapKit.framework */,
 				28B633041F71554F00F35212 /* CoreData.framework */,
+				DDC12F502C1676F6AF8978C9 /* Pods_MadridActivities.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -217,6 +229,7 @@
 				28769C131F73D55300D472C4 /* MapAndActivitiesViewController+CollectionViewController.swift */,
 				28F03F371F7A5917004867E8 /* MapAndShopsViewController+CollectionViewController.swift */,
 				28F03F461F7A677E004867E8 /* ShopDetailViewController.swift */,
+				28B93D531F7D283500343355 /* ActivityDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -280,6 +293,15 @@
 			path = CacheInteractors;
 			sourceTree = "<group>";
 		};
+		BB04C3D2804A8FA88412EED1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FD72FFE6371F375D0261A2A7 /* Pods-MadridActivities.debug.xcconfig */,
+				7A174227347737E77AF543C2 /* Pods-MadridActivities.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -287,9 +309,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28B632FD1F71552D00F35212 /* Build configuration list for PBXNativeTarget "MadridActivities" */;
 			buildPhases = (
+				20032548AEA7252E0C7590D1 /* [CP] Check Pods Manifest.lock */,
 				28B632DC1F71552D00F35212 /* Sources */,
 				28B632DD1F71552D00F35212 /* Frameworks */,
 				28B632DE1F71552D00F35212 /* Resources */,
+				73712B1A8BA386CD52E3FC72 /* [CP] Embed Pods Frameworks */,
+				D73DEC68769654055140C607 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -368,6 +393,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28B93D561F7D37DB00343355 /* Podfile in Resources */,
 				28B632EE1F71552D00F35212 /* LaunchScreen.storyboard in Resources */,
 				28B632EB1F71552D00F35212 /* Assets.xcassets in Resources */,
 				28EE87A31F72C83900CCCB84 /* 101-bank.png in Resources */,
@@ -385,11 +411,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		20032548AEA7252E0C7590D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MadridActivities-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73712B1A8BA386CD52E3FC72 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MadridActivities/Pods-MadridActivities-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MadridActivities/Pods-MadridActivities-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D73DEC68769654055140C607 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MadridActivities/Pods-MadridActivities-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		28B632DC1F71552D00F35212 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28B93D541F7D283500343355 /* ActivityDetailViewController.swift in Sources */,
 				28EE87AF1F72F50D00CCCB84 /* CoreDataStack.swift in Sources */,
 				28B93D501F7D061C00343355 /* SaveAllActivitiesInteractor.swift in Sources */,
 				28F03F401F7A5AC2004867E8 /* SetExecutedOnceInteractor.swift in Sources */,
@@ -572,6 +653,7 @@
 		};
 		28B632FE1F71552D00F35212 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD72FFE6371F375D0261A2A7 /* Pods-MadridActivities.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -587,6 +669,7 @@
 		};
 		28B632FF1F71552D00F35212 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A174227347737E77AF543C2 /* Pods-MadridActivities.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

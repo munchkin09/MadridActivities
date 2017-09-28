@@ -66,9 +66,6 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FPB-k6-dGp">
                                 <rect key="frame" x="0.0" y="330" width="375" height="288"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="288" id="vy3-Pi-IO5"/>
-                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Dty-7g-8C7">
                                     <size key="itemSize" width="365" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -107,6 +104,7 @@
                                             <outlet property="activityImage" destination="28y-Td-bqu" id="PZx-zD-plW"/>
                                             <outlet property="activityNameLabel" destination="K3l-ed-KLr" id="tim-2w-fl6"/>
                                             <outlet property="activityOpeningLabel" destination="B2K-Bt-T5L" id="a2y-SS-u6a"/>
+                                            <segue destination="Gic-ju-3sb" kind="show" id="0Zf-vk-sWF"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -114,6 +112,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="FPB-k6-dGp" firstAttribute="top" secondItem="5QA-CV-yG4" secondAttribute="bottom" id="Avk-co-tuD"/>
                             <constraint firstItem="QZK-2V-5ek" firstAttribute="trailing" secondItem="FPB-k6-dGp" secondAttribute="trailing" id="GPc-T3-ycK"/>
                             <constraint firstItem="QZK-2V-5ek" firstAttribute="bottom" secondItem="FPB-k6-dGp" secondAttribute="bottom" id="ZS9-WI-LWF"/>
                             <constraint firstItem="FPB-k6-dGp" firstAttribute="leading" secondItem="QZK-2V-5ek" secondAttribute="leading" id="ceS-01-m9O"/>
@@ -132,6 +131,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E93-Sv-c4e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="912.79999999999995" y="-154.27286356821591"/>
+        </scene>
+        <!--Activity Detail View Controller-->
+        <scene sceneID="qRh-i2-NZR">
+            <objects>
+                <viewController id="Gic-ju-3sb" customClass="ActivityDetailViewController" customModule="MadridActivities" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Cj-N0-8Q0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="FB9-Wk-l0I"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qOJ-cD-9am" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1673" y="-154"/>
         </scene>
         <!--Shops-->
         <scene sceneID="PBT-7H-52r">

@@ -36,7 +36,10 @@ class MapAndShopsViewController: UIViewController, CLLocationManagerDelegate {
         self.collectionShops.dataSource = self
         
         let madridLocation = CLLocation(latitude: 40.416418, longitude: -3.703410)
-        self.mapShops.setCenter(madridLocation.coordinate, animated: true)
+        let coordSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let region = MKCoordinateRegion(center: madridLocation.coordinate, span: coordSpan)
+        self.mapShops.setRegion(region, animated: true)
+        
     }
 
     override func didReceiveMemoryWarning() {
