@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ShopCollectionViewCell: UICollectionViewCell {
     
@@ -26,6 +27,7 @@ class ShopCollectionViewCell: UICollectionViewCell {
          self.titleLabel.text = shop.name
          self.opHoursLabel.text = shop.openingHours
          //TODO: image view
-         self.shop?.logo.loadImage(into: self.logoImage)
+        self.logoImage.sd_setImage(with: URL(string: (self.shop?.logo)!), completed: nil)
+         //self.shop?.logo.loadImage(into: self.logoImage)
     }
 }

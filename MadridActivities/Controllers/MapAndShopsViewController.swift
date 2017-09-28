@@ -28,6 +28,7 @@ class MapAndShopsViewController: UIViewController, CLLocationManagerDelegate {
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.delegate = self
         self.locationManager.startUpdatingLocation()
+        self.mapShops.showsUserLocation = true
         // Do any additional setup after loading the view.
         ExecuteOnceInteractorImpl().execute(forKey: "once_shops") {
             initializeData()

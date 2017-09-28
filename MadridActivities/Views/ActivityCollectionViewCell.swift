@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ActivityCollectionViewCell: UICollectionViewCell {
     
@@ -24,6 +25,6 @@ class ActivityCollectionViewCell: UICollectionViewCell {
         self.activityNameLabel.text = self.activity?.name
         self.activityOpeningLabel.text = self.activity?.openingHours
         //TODO: image view
-        self.activity?.logo.loadImage(into: self.activityImage)
+        self.activityImage.sd_setImage(with: URL(string: (self.activity?.logo)!), completed: nil)
     }
 }
