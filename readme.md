@@ -13,7 +13,7 @@ Cocoapods shell
 
 ## Installation
 
-Go into your Project directory and write
+Go into your Project directory in a console and write
 
 `pod install`
 
