@@ -38,14 +38,7 @@ class MapAndActivitiesViewController: UIViewController {
         let coordSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         let region = MKCoordinateRegion(center: madridLocation.coordinate, span: coordSpan)
         self.mapActivities.setRegion(region, animated: true)
-        
-        if let arrActivitiesCD = fetchedResultsController.fetchedObjects {
-            for activityCD in arrActivitiesCD {
-                let activityLocation = CLLocation(latitude: CLLocationDegrees(activityCD.latitude), longitude: CLLocationDegrees(activityCD.longitude))
-                let note = Note(coordinate: activityLocation.coordinate, title: activityCD.name!, subtitle: "")
-                self.mapActivities.addAnnotation(note)
-            }
-        }
+        drawPinsInMap()
         
     }
 
@@ -117,7 +110,16 @@ class MapAndActivitiesViewController: UIViewController {
             vc.activity = mapActivityCDIntoActivity(activityCD: activityCD)
         }
     }
-
+    
+    func drawPinsInMap() {
+        if let arrActivitiesCD = fetchedResultsController.fetchedObjects {
+            for activityCD in arrActivitiesCD {
+                let activityLocation = CLLocation(latitude: CLLocationDegrees(activityCD.latitude), longitude: CLLocationDegrees(activityCD.longitude))
+                let note = Note(coordinate: activityLocation.coordinate, title: activityCD.name!, subtitle: "")
+                self.mapActivities.addAnnotation(note)
+            }
+        }
+    }
 
 }
 

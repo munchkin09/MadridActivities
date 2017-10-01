@@ -39,14 +39,8 @@ class MapAndShopsViewController: UIViewController, CLLocationManagerDelegate {
         let coordSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         let region = MKCoordinateRegion(center: madridLocation.coordinate, span: coordSpan)
         self.mapShops.setRegion(region, animated: true)
+        drawPinsInMap()
         
-        if let arrShopsCD = fetchedResultsController.fetchedObjects {
-            for shopCD in arrShopsCD {
-                let shopLocation = CLLocation(latitude: CLLocationDegrees(shopCD.latitude), longitude: CLLocationDegrees(shopCD.longitude))
-                let note = Note(coordinate: shopLocation.coordinate, title: shopCD.name!, subtitle: "")
-                self.mapShops.addAnnotation(note)
-            }
-        }
         
     }
 
@@ -128,4 +122,13 @@ class MapAndShopsViewController: UIViewController, CLLocationManagerDelegate {
         //self.mapShops.setCenter(location.coordinate, animated: true)
     }
     
+    func drawPinsInMap() {
+        if let arrShopsCD = fetchedResultsController.fetchedObjects {
+            for shopCD in arrShopsCD {
+                let shopLocation = CLLocation(latitude: CLLocationDegrees(shopCD.latitude), longitude: CLLocationDegrees(shopCD.longitude))
+                let note = Note(coordinate: shopLocation.coordinate, title: shopCD.name!, subtitle: "")
+                self.mapShops.addAnnotation(note)
+            }
+        }
+    }
 }
