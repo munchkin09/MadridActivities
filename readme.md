@@ -23,4 +23,13 @@ Execute the project from the ![alt text](https://i.imgur.com/VJOD32P.png "xcwork
 
 Choose your favorite iOS Simulator or Device and press Play button in XCode. Enjoy!
 
+## To-Do´s
 
+There´ a few features not implemented yet
+
+* If there's no Internet connection a message will be shown to the user.
+
+* If you tap on a pin in the map a callout will open with the logo +
+shop name. Taping the callout takes us to the detail shop screen.
+
+* Test: model, DAOs
