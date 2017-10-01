@@ -25,7 +25,7 @@ Choose your favorite iOS Simulator or Device and press Play button in XCode. Enj
 
 ## To-Do´s
 
-There´ a few features not implemented yet
+There´s a few features not implemented yet
 
 * If there's no Internet connection a message will be shown to the user.
 
