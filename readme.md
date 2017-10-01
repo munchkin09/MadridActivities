@@ -17,7 +17,7 @@ Go into your Project directory and write
 
 `gem install`
 
-Execute the project from the MadridActivities.xcworkspace icon
+Execute the project from the ![alt text](https://imgur.com/VJOD32P "xcworkspace") icon
 
 ## How to use
 
