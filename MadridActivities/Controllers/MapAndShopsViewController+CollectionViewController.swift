@@ -24,12 +24,6 @@ extension MapAndShopsViewController : UICollectionViewDelegate,UICollectionViewD
         let cell : ShopCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopCell", for: indexPath) as! ShopCollectionViewCell
         
         let shopCD : ShopCD = fetchedResultsController.object(at: indexPath)
-        
-        let shopLocation = CLLocation(latitude: CLLocationDegrees(shopCD.latitude), longitude: CLLocationDegrees(shopCD.longitude))
-        
-        
-        let note = Note(coordinate: shopLocation.coordinate, title: shopCD.name!, subtitle: "")
-        self.mapShops.addAnnotation(note)
         cell.refresh(shop: mapShopCDIntoShop(shopCD: shopCD))
         return cell
     }

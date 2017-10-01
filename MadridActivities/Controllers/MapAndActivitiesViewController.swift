@@ -15,6 +15,7 @@ import CoreLocation
 class MapAndActivitiesViewController: UIViewController {
 
     var context : NSManagedObjectContext!
+    let locationManager = CLLocationManager()
     
     @IBOutlet weak var collectionActivities: UICollectionView!
     
@@ -24,11 +25,27 @@ class MapAndActivitiesViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        self.locationManager.requestWhenInUseAuthorization()
+        self.mapActivities.showsUserLocation = true
         ExecuteOnceInteractorImpl().execute(forKey: "once_activities") {
             initializeData()
         }
         self.collectionActivities.delegate = self
         self.collectionActivities.dataSource = self
+        
+        
+        let madridLocation = CLLocation(latitude: 40.416418, longitude: -3.703410)
+        let coordSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let region = MKCoordinateRegion(center: madridLocation.coordinate, span: coordSpan)
+        self.mapActivities.setRegion(region, animated: true)
+        
+        if let arrActivitiesCD = fetchedResultsController.fetchedObjects {
+            for activityCD in arrActivitiesCD {
+                let activityLocation = CLLocation(latitude: CLLocationDegrees(activityCD.latitude), longitude: CLLocationDegrees(activityCD.longitude))
+                let note = Note(coordinate: activityLocation.coordinate, title: activityCD.name!, subtitle: "")
+                self.mapActivities.addAnnotation(note)
+            }
+        }
         
     }
 

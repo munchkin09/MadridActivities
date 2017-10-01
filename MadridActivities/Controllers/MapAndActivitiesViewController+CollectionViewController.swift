@@ -25,11 +25,6 @@ extension MapAndActivitiesViewController : UICollectionViewDelegate, UICollectio
         let cell : ActivityCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ActivityCell", for: indexPath) as! ActivityCollectionViewCell
         let activityCD : ActivityCD = fetchedResultsController.object(at: indexPath)
         
-        let shopLocation = CLLocation(latitude: CLLocationDegrees(activityCD.latitude), longitude: CLLocationDegrees(activityCD.longitude))
-        
-        
-        let note = Note(coordinate: shopLocation.coordinate, title: activityCD.name!, subtitle: "")
-        self.mapActivities.addAnnotation(note)
         cell.refresh(activity: mapActivityCDIntoActivity(activityCD: activityCD))
         return cell
     }

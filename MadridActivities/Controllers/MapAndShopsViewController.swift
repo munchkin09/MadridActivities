@@ -16,7 +16,7 @@ class MapAndShopsViewController: UIViewController, CLLocationManagerDelegate {
 
     var context : NSManagedObjectContext!
     
-    let locationManager = CLLocationManager()
+    
     
     @IBOutlet weak var mapShops: MKMapView!
     
@@ -25,14 +25,13 @@ class MapAndShopsViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.locationManager.requestWhenInUseAuthorization()
-        self.locationManager.delegate = self
-        self.locationManager.startUpdatingLocation()
         self.mapShops.showsUserLocation = true
         // Do any additional setup after loading the view.
         ExecuteOnceInteractorImpl().execute(forKey: "once_shops") {
             initializeData()
         }
+        
+        
         self.collectionShops.delegate = self
         self.collectionShops.dataSource = self
         
@@ -40,6 +39,14 @@ class MapAndShopsViewController: UIViewController, CLLocationManagerDelegate {
         let coordSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         let region = MKCoordinateRegion(center: madridLocation.coordinate, span: coordSpan)
         self.mapShops.setRegion(region, animated: true)
+        
+        if let arrShopsCD = fetchedResultsController.fetchedObjects {
+            for shopCD in arrShopsCD {
+                let shopLocation = CLLocation(latitude: CLLocationDegrees(shopCD.latitude), longitude: CLLocationDegrees(shopCD.longitude))
+                let note = Note(coordinate: shopLocation.coordinate, title: shopCD.name!, subtitle: "")
+                self.mapShops.addAnnotation(note)
+            }
+        }
         
     }
 
@@ -62,8 +69,8 @@ class MapAndShopsViewController: UIViewController, CLLocationManagerDelegate {
                 self.collectionShops.delegate = self
                 self.collectionShops.dataSource = self
                 self.collectionShops.reloadData()
+                
             })
-            
         })
     }
     
