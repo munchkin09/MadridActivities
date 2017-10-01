@@ -49,7 +49,7 @@ func parseActivities(data: Data) -> Activities {
         
         for activityJson in result {
             let activity = Activity(name: activityJson["name"] as! String)
-            activity.address = activityJson["address"] as! String
+            activity.address = activityJson["address"] as! String 
             if preferredLang == "es-ES" {
                 activity.description = activityJson["description_es"] as! String
                 activity.openingHours = activityJson["opening_hours_es"] as! String

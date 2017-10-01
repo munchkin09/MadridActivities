@@ -7,13 +7,31 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ActivityDetailViewController: UIViewController {
 
+    var activity : Activity?
+    
+    @IBOutlet weak var imageMap: UIImageView!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var openingLabel: UILabel!
+    
+    @IBOutlet weak var descriptionLabel: UITextView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let strUrl = "https://maps.googleapis.com/maps/api/staticmap?center=\(activity!.latitude!.description),\(activity!.longitude!.description)&zoom=17&size=320x220&scale=2&markers=%7Ccolor:0x9C7B14%7C\(activity!.latitude!.description),\(activity!.longitude!.description)"
+        self.imageMap.sd_setImage(with: URL(string: strUrl), completed: nil)
+        self.nameLabel.text = self.activity?.address
+        self.openingLabel.text = self.activity?.openingHours
+        self.descriptionLabel.text = self.activity?.description
     }
 
     override func didReceiveMemoryWarning() {

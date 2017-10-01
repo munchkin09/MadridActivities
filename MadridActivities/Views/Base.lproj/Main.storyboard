@@ -104,7 +104,7 @@
                                             <outlet property="activityImage" destination="28y-Td-bqu" id="PZx-zD-plW"/>
                                             <outlet property="activityNameLabel" destination="K3l-ed-KLr" id="tim-2w-fl6"/>
                                             <outlet property="activityOpeningLabel" destination="B2K-Bt-T5L" id="a2y-SS-u6a"/>
-                                            <segue destination="Gic-ju-3sb" kind="show" id="0Zf-vk-sWF"/>
+                                            <segue destination="Gic-ju-3sb" kind="show" identifier="ActivityDetailSegue" id="0Zf-vk-sWF"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -139,13 +139,47 @@
                     <view key="view" contentMode="scaleToFill" id="1Cj-N0-8Q0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bcY-V6-7IP">
+                                <rect key="frame" x="16" y="452" width="343" height="166"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qiQ-zo-gyq">
+                                <rect key="frame" x="16" y="74" width="343" height="242"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHC-AP-wTy">
+                                <rect key="frame" x="16" y="324" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjg-YE-eGk">
+                                <rect key="frame" x="16" y="353" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="FB9-Wk-l0I"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="bcY-V6-7IP" id="nH3-ed-nyk"/>
+                        <outlet property="imageMap" destination="qiQ-zo-gyq" id="j2L-Jg-nch"/>
+                        <outlet property="nameLabel" destination="cHC-AP-wTy" id="6P0-bZ-zHt"/>
+                        <outlet property="openingLabel" destination="Vjg-YE-eGk" id="fEx-yY-GMl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qOJ-cD-9am" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1673" y="-154"/>
+            <point key="canvasLocation" x="1672.8" y="-154.27286356821591"/>
         </scene>
         <!--Shops-->
         <scene sceneID="PBT-7H-52r">

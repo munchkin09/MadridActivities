@@ -91,6 +91,15 @@ class MapAndActivitiesViewController: UIViewController {
         
         return _fetchedResultsController!
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ActivityDetailSegue" {
+            let vc = segue.destination as! ActivityDetailViewController
+            let indexPath = self.collectionActivities.indexPathsForSelectedItems?.first
+            let activityCD : ActivityCD = fetchedResultsController.object(at: indexPath!)
+            vc.activity = mapActivityCDIntoActivity(activityCD: activityCD)
+        }
+    }
 
 
 }
