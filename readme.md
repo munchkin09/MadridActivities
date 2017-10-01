@@ -8,7 +8,7 @@ XCode 9.0
 
 iOS 11
 
-Cocoapods shell
+Cocoapods shell [How to install cocoapods](https://cocoapods.org)
 
 
 ## Installation
