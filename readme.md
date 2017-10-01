@@ -15,7 +15,7 @@ Cocoapods shell
 
 Go into your Project directory and write
 
-`gem install`
+`pod install`
 
 Execute the project from the ![alt text](https://i.imgur.com/VJOD32P.png "xcworkspace") icon
 
