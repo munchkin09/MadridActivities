@@ -68,10 +68,19 @@ class MapAndShopsViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == "ShowShopDetailSegue" {
+            
+            let shopCD : ShopCD
             let vc = segue.destination as! ShopDetailViewController
-            let indexPath = self.collectionShops.indexPathsForSelectedItems?.first
-            let shopCD : ShopCD = fetchedResultsController.object(at: indexPath!)
+            
+            if sender is ShopCD {
+                shopCD = (sender as? ShopCD)!
+            } else {
+                let indexPath = self.collectionShops.indexPathsForSelectedItems?.first
+                shopCD = fetchedResultsController.object(at: indexPath!)
+                
+            }
             vc.shop = mapShopCDIntoShop(shopCD: shopCD)
             
         }
@@ -115,14 +124,6 @@ class MapAndShopsViewController: UIViewController {
         return _fetchedResultsController!
     }
     
-    func drawPinsInMap() {
-        if let arrShopsCD = fetchedResultsController.fetchedObjects {
-            for shopCD in arrShopsCD {
-                let shopLocation = CLLocation(latitude: CLLocationDegrees(shopCD.latitude), longitude: CLLocationDegrees(shopCD.longitude))
-                let note = NoteShop(coordinate: shopLocation.coordinate, title: shopCD.name!, subtitle: shopCD.address ?? "", shopCD: shopCD)
-                self.mapShops.addAnnotation(note)
-            }
-        }
-    }
+   
 
 }

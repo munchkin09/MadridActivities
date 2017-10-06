@@ -41,4 +41,21 @@ extension MapAndShopsViewController : MKMapViewDelegate {
         
         return noteView
     }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if let noteShop = view.annotation as? NoteShop {
+            let shopCD = noteShop.shopCD
+            self.performSegue(withIdentifier: "ShowShopDetailSegue", sender: shopCD )
+        }
+    }
+    
+    func drawPinsInMap() {
+        if let arrShopsCD = fetchedResultsController.fetchedObjects {
+            for shopCD in arrShopsCD {
+                let shopLocation = CLLocation(latitude: CLLocationDegrees(shopCD.latitude), longitude: CLLocationDegrees(shopCD.longitude))
+                let note = NoteShop(coordinate: shopLocation.coordinate, title: shopCD.name!, subtitle: shopCD.address ?? "", shopCD: shopCD)
+                self.mapShops.addAnnotation(note)
+            }
+        }
+    }
 }
