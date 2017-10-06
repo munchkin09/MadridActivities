@@ -12,7 +12,7 @@ import CoreLocation
 import MapKit
 
 
-class MapAndShopsViewController: UIViewController, CLLocationManagerDelegate {
+class MapAndShopsViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     var context : NSManagedObjectContext!
     
@@ -117,7 +117,7 @@ class MapAndShopsViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations[0]
+        let _ = locations[0]
         
         //self.mapShops.setCenter(location.coordinate, animated: true)
     }

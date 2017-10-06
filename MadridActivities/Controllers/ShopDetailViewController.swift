@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ShopDetailViewController: UIViewController {
 
@@ -23,7 +24,7 @@ class ShopDetailViewController: UIViewController {
         self.title = shop?.name
         self.descriptionText.text = shop?.description
         let strUrl = "https://maps.googleapis.com/maps/api/staticmap?center=\(shop!.latitude!.description),\(shop!.longitude!.description)&zoom=17&size=320x220&scale=2&markers=%7Ccolor:0x9C7B14%7C\(shop!.latitude!.description),\(shop!.longitude!.description)"
-        strUrl.loadImage(into: staticMapImage)
+        self.staticMapImage.sd_setImage(with: URL(string: strUrl), completed: nil)
     }
 
     override func didReceiveMemoryWarning() {
