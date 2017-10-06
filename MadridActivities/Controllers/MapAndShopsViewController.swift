@@ -12,11 +12,9 @@ import CoreLocation
 import MapKit
 
 
-class MapAndShopsViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class MapAndShopsViewController: UIViewController {
 
     var context : NSManagedObjectContext!
-    
-    
     
     @IBOutlet weak var mapShops: MKMapView!
     
@@ -34,6 +32,7 @@ class MapAndShopsViewController: UIViewController, CLLocationManagerDelegate, MK
         
         self.collectionShops.delegate = self
         self.collectionShops.dataSource = self
+        self.mapShops.delegate = self
         
         let madridLocation = CLLocation(latitude: 40.416418, longitude: -3.703410)
         let coordSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
@@ -116,19 +115,14 @@ class MapAndShopsViewController: UIViewController, CLLocationManagerDelegate, MK
         return _fetchedResultsController!
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let _ = locations[0]
-        
-        //self.mapShops.setCenter(location.coordinate, animated: true)
-    }
-    
     func drawPinsInMap() {
         if let arrShopsCD = fetchedResultsController.fetchedObjects {
             for shopCD in arrShopsCD {
                 let shopLocation = CLLocation(latitude: CLLocationDegrees(shopCD.latitude), longitude: CLLocationDegrees(shopCD.longitude))
-                let note = Note(coordinate: shopLocation.coordinate, title: shopCD.name!, subtitle: "")
+                let note = NoteShop(coordinate: shopLocation.coordinate, title: shopCD.name!, subtitle: shopCD.address ?? "", shopCD: shopCD)
                 self.mapShops.addAnnotation(note)
             }
         }
     }
+
 }

@@ -110,16 +110,5 @@ class MapAndActivitiesViewController: UIViewController {
             vc.activity = mapActivityCDIntoActivity(activityCD: activityCD)
         }
     }
-    
-    func drawPinsInMap() {
-        if let arrActivitiesCD = fetchedResultsController.fetchedObjects {
-            for activityCD in arrActivitiesCD {
-                let activityLocation = CLLocation(latitude: CLLocationDegrees(activityCD.latitude), longitude: CLLocationDegrees(activityCD.longitude))
-                let note = Note(coordinate: activityLocation.coordinate, title: activityCD.name!, subtitle: "")
-                self.mapActivities.addAnnotation(note)
-            }
-        }
-    }
-
 }
 
