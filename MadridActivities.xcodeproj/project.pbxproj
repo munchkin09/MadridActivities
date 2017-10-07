@@ -31,6 +31,7 @@
 		28B93D541F7D283500343355 /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B93D531F7D283500343355 /* ActivityDetailViewController.swift */; };
 		28B93D561F7D37DB00343355 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 28B93D551F7D37DB00343355 /* Podfile */; };
 		28CB77371F87D2AA00EFE109 /* MapAndShopsViewController+MKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CB77361F87D2AA00EFE109 /* MapAndShopsViewController+MKMapViewDelegate.swift */; };
+		28CBE70A1F893CAA00A85808 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CBE7091F893CAA00A85808 /* Reachability.swift */; };
 		28EE87A31F72C83900CCCB84 /* 101-bank.png in Resources */ = {isa = PBXBuildFile; fileRef = 28EE87A21F72C53600CCCB84 /* 101-bank.png */; };
 		28EE87A41F72C83C00CCCB84 /* 101-dumbbell.png in Resources */ = {isa = PBXBuildFile; fileRef = 28EE87A11F72C53600CCCB84 /* 101-dumbbell.png */; };
 		28EE87A61F72CA8400CCCB84 /* MapAndShopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE87A51F72CA8400CCCB84 /* MapAndShopsViewController.swift */; };
@@ -93,6 +94,7 @@
 		28B93D551F7D37DB00343355 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		28CB77361F87D2AA00EFE109 /* MapAndShopsViewController+MKMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapAndShopsViewController+MKMapViewDelegate.swift"; sourceTree = "<group>"; };
 		28CB77381F87E72200EFE109 /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = images.png; sourceTree = "<group>"; };
+		28CBE7091F893CAA00A85808 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		28EE87A11F72C53600CCCB84 /* 101-dumbbell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "101-dumbbell.png"; sourceTree = "<group>"; };
 		28EE87A21F72C53600CCCB84 /* 101-bank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "101-bank.png"; sourceTree = "<group>"; };
 		28EE87A51F72CA8400CCCB84 /* MapAndShopsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAndShopsViewController.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				28EE87AC1F72F13E00CCCB84 /* String.swift */,
 				28151F2D1F791A8400E23CAF /* Typealias.swift */,
 				28EE87AE1F72F50D00CCCB84 /* CoreDataStack.swift */,
+				28CBE7091F893CAA00A85808 /* Reachability.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -496,6 +499,7 @@
 				28B93D521F7D068800343355 /* SaveAllActivitiesInteractorImpl.swift in Sources */,
 				28151F2A1F791A1F00E23CAF /* DownloadAllShopsInteractor.swift in Sources */,
 				28B481DB1F79A2F500A0B0D8 /* MapShops.swift in Sources */,
+				28CBE70A1F893CAA00A85808 /* Reachability.swift in Sources */,
 				28EE87AD1F72F13E00CCCB84 /* String.swift in Sources */,
 				28F03F451F7A5B40004867E8 /* SaveAllShopsInteractor.swift in Sources */,
 				28B632E61F71552D00F35212 /* MapAndActivitiesViewController.swift in Sources */,
