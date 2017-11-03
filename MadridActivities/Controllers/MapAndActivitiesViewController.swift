@@ -42,7 +42,7 @@ class MapAndActivitiesViewController: UIViewController {
         self.collectionActivities.dataSource = self
         
         
-        let madridLocation = CLLocation(latitude: 40.416418, longitude: -3.703410)
+        let madridLocation = CLLocation(latitude: initialLatitude , longitude: initialLongitude )
         let coordSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         let region = MKCoordinateRegion(center: madridLocation.coordinate, span: coordSpan)
         self.mapActivities.setRegion(region, animated: true)
