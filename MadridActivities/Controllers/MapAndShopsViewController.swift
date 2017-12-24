@@ -12,11 +12,9 @@ import CoreLocation
 import MapKit
 
 
-class MapAndShopsViewController: UIViewController, CLLocationManagerDelegate {
+class MapAndShopsViewController: UIViewController {
 
     var context : NSManagedObjectContext!
-    
-    
     
     @IBOutlet weak var mapShops: MKMapView!
     
@@ -34,6 +32,7 @@ class MapAndShopsViewController: UIViewController, CLLocationManagerDelegate {
         
         self.collectionShops.delegate = self
         self.collectionShops.dataSource = self
+        self.mapShops.delegate = self
         
         let madridLocation = CLLocation(latitude: 40.416418, longitude: -3.703410)
         let coordSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
@@ -69,10 +68,19 @@ class MapAndShopsViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == "ShowShopDetailSegue" {
+            
+            let shopCD : ShopCD
             let vc = segue.destination as! ShopDetailViewController
-            let indexPath = self.collectionShops.indexPathsForSelectedItems?.first
-            let shopCD : ShopCD = fetchedResultsController.object(at: indexPath!)
+            
+            if sender is ShopCD {
+                shopCD = (sender as? ShopCD)!
+            } else {
+                let indexPath = self.collectionShops.indexPathsForSelectedItems?.first
+                shopCD = fetchedResultsController.object(at: indexPath!)
+                
+            }
             vc.shop = mapShopCDIntoShop(shopCD: shopCD)
             
         }
@@ -116,19 +124,6 @@ class MapAndShopsViewController: UIViewController, CLLocationManagerDelegate {
         return _fetchedResultsController!
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations[0]
-        
-        //self.mapShops.setCenter(location.coordinate, animated: true)
-    }
-    
-    func drawPinsInMap() {
-        if let arrShopsCD = fetchedResultsController.fetchedObjects {
-            for shopCD in arrShopsCD {
-                let shopLocation = CLLocation(latitude: CLLocationDegrees(shopCD.latitude), longitude: CLLocationDegrees(shopCD.longitude))
-                let note = Note(coordinate: shopLocation.coordinate, title: shopCD.name!, subtitle: "")
-                self.mapShops.addAnnotation(note)
-            }
-        }
-    }
+   
+
 }

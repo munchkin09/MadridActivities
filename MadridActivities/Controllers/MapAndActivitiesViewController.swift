@@ -16,6 +16,7 @@ class MapAndActivitiesViewController: UIViewController {
 
     var context : NSManagedObjectContext!
     let locationManager = CLLocationManager()
+    let reachability = Reachability()!
     
     @IBOutlet weak var collectionActivities: UICollectionView!
     
@@ -27,19 +28,31 @@ class MapAndActivitiesViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.locationManager.requestWhenInUseAuthorization()
         self.mapActivities.showsUserLocation = true
-        ExecuteOnceInteractorImpl().execute(forKey: "once_activities") {
-            initializeData()
+        reachability.whenReachable = { reachability in
+            ExecuteOnceInteractorImpl().execute(forKey: "once_activities") {
+                self.initializeData()
+            }
         }
+        
+        reachability.whenUnreachable = { reachability in
+            self.nonReachability()
+        }
+        
         self.collectionActivities.delegate = self
         self.collectionActivities.dataSource = self
         
         
-        let madridLocation = CLLocation(latitude: 40.416418, longitude: -3.703410)
+        let madridLocation = CLLocation(latitude: initialLatitude , longitude: initialLongitude )
         let coordSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         let region = MKCoordinateRegion(center: madridLocation.coordinate, span: coordSpan)
         self.mapActivities.setRegion(region, animated: true)
         drawPinsInMap()
         
+        do {
+            try reachability.startNotifier()
+        } catch {
+            print("Unable to start notifier")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -102,6 +115,7 @@ class MapAndActivitiesViewController: UIViewController {
         return _fetchedResultsController!
     }
     
+    //MARK: - Segue code
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ActivityDetailSegue" {
             let vc = segue.destination as! ActivityDetailViewController
@@ -111,15 +125,13 @@ class MapAndActivitiesViewController: UIViewController {
         }
     }
     
-    func drawPinsInMap() {
-        if let arrActivitiesCD = fetchedResultsController.fetchedObjects {
-            for activityCD in arrActivitiesCD {
-                let activityLocation = CLLocation(latitude: CLLocationDegrees(activityCD.latitude), longitude: CLLocationDegrees(activityCD.longitude))
-                let note = Note(coordinate: activityLocation.coordinate, title: activityCD.name!, subtitle: "")
-                self.mapActivities.addAnnotation(note)
-            }
-        }
+    //MARK: - Reachability
+    func nonReachability() {
+        let alert = UIAlertController(title: "No connection", message: "There is no internet connection", preferredStyle: UIAlertControllerStyle.alert)
+        self.present(alert, animated: true, completion: nil)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in
+            alert.dismiss(animated: true, completion: nil)
+        })
     }
-
 }
 

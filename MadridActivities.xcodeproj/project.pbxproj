@@ -13,6 +13,10 @@
 		28151F2E1F791A8400E23CAF /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28151F2D1F791A8400E23CAF /* Typealias.swift */; };
 		28151F301F791E2C00E23CAF /* DownloadAllShopsInteractorNSURLSessionImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28151F2F1F791E2C00E23CAF /* DownloadAllShopsInteractorNSURLSessionImpl.swift */; };
 		28151F321F791E5700E23CAF /* DownloadAllActivitiesInteractorNSURLSessionImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28151F311F791E5700E23CAF /* DownloadAllActivitiesInteractorNSURLSessionImpl.swift */; };
+		281635F91FAC81E6003F9336 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281635F81FAC81E6003F9336 /* Constants.swift */; };
+		281635FB1FAC8A0A003F9336 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281635FA1FAC8A0A003F9336 /* InitialViewController.swift */; };
+		2863042C1F87C15D00089A09 /* MapAndActivitiesViewController+MKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2863042B1F87C15D00089A09 /* MapAndActivitiesViewController+MKMapViewDelegate.swift */; };
+		2863042E1F87CA4000089A09 /* NoteActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2863042D1F87CA4000089A09 /* NoteActivity.swift */; };
 		28769C141F73D55300D472C4 /* MapAndActivitiesViewController+CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28769C131F73D55300D472C4 /* MapAndActivitiesViewController+CollectionViewController.swift */; };
 		28B481DB1F79A2F500A0B0D8 /* MapShops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE87B91F7300D900CCCB84 /* MapShops.swift */; };
 		28B632E41F71552D00F35212 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B632E31F71552D00F35212 /* AppDelegate.swift */; };
@@ -28,12 +32,14 @@
 		28B93D521F7D068800343355 /* SaveAllActivitiesInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B93D511F7D068800343355 /* SaveAllActivitiesInteractorImpl.swift */; };
 		28B93D541F7D283500343355 /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B93D531F7D283500343355 /* ActivityDetailViewController.swift */; };
 		28B93D561F7D37DB00343355 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 28B93D551F7D37DB00343355 /* Podfile */; };
+		28CB77371F87D2AA00EFE109 /* MapAndShopsViewController+MKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CB77361F87D2AA00EFE109 /* MapAndShopsViewController+MKMapViewDelegate.swift */; };
+		28CBE70A1F893CAA00A85808 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CBE7091F893CAA00A85808 /* Reachability.swift */; };
 		28EE87A31F72C83900CCCB84 /* 101-bank.png in Resources */ = {isa = PBXBuildFile; fileRef = 28EE87A21F72C53600CCCB84 /* 101-bank.png */; };
 		28EE87A41F72C83C00CCCB84 /* 101-dumbbell.png in Resources */ = {isa = PBXBuildFile; fileRef = 28EE87A11F72C53600CCCB84 /* 101-dumbbell.png */; };
 		28EE87A61F72CA8400CCCB84 /* MapAndShopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE87A51F72CA8400CCCB84 /* MapAndShopsViewController.swift */; };
 		28EE87A81F72EA1B00CCCB84 /* ShopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE87A71F72EA1B00CCCB84 /* ShopCollectionViewCell.swift */; };
 		28EE87AA1F72EDDF00CCCB84 /* ActivityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE87A91F72EDDE00CCCB84 /* ActivityCollectionViewCell.swift */; };
-		28EE87AD1F72F13E00CCCB84 /* String+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE87AC1F72F13E00CCCB84 /* String+Image.swift */; };
+		28EE87AD1F72F13E00CCCB84 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE87AC1F72F13E00CCCB84 /* String.swift */; };
 		28EE87AF1F72F50D00CCCB84 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE87AE1F72F50D00CCCB84 /* CoreDataStack.swift */; };
 		28EE87B11F72F60600CCCB84 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE87B01F72F60600CCCB84 /* Activity.swift */; };
 		28EE87B31F72F76D00CCCB84 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE87B21F72F76C00CCCB84 /* Shop.swift */; };
@@ -48,7 +54,7 @@
 		28F03F441F7A5B3A004867E8 /* SaveAllShopsInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F03F3B1F7A5AA3004867E8 /* SaveAllShopsInteractorImpl.swift */; };
 		28F03F451F7A5B40004867E8 /* SaveAllShopsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F03F3A1F7A5A93004867E8 /* SaveAllShopsInteractor.swift */; };
 		28F03F471F7A677E004867E8 /* ShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F03F461F7A677E004867E8 /* ShopDetailViewController.swift */; };
-		28F03F491F7A8951004867E8 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F03F481F7A8951004867E8 /* Note.swift */; };
+		28F03F491F7A8951004867E8 /* NoteShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F03F481F7A8951004867E8 /* NoteShop.swift */; };
 		DE29DF0EFEDAB36CD194CDDB /* Pods_MadridActivities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC12F502C1676F6AF8978C9 /* Pods_MadridActivities.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +74,10 @@
 		28151F2D1F791A8400E23CAF /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		28151F2F1F791E2C00E23CAF /* DownloadAllShopsInteractorNSURLSessionImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAllShopsInteractorNSURLSessionImpl.swift; sourceTree = "<group>"; };
 		28151F311F791E5700E23CAF /* DownloadAllActivitiesInteractorNSURLSessionImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAllActivitiesInteractorNSURLSessionImpl.swift; sourceTree = "<group>"; };
+		281635F81FAC81E6003F9336 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		281635FA1FAC8A0A003F9336 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		2863042B1F87C15D00089A09 /* MapAndActivitiesViewController+MKMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapAndActivitiesViewController+MKMapViewDelegate.swift"; sourceTree = "<group>"; };
+		2863042D1F87CA4000089A09 /* NoteActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteActivity.swift; sourceTree = "<group>"; };
 		28769C131F73D55300D472C4 /* MapAndActivitiesViewController+CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapAndActivitiesViewController+CollectionViewController.swift"; sourceTree = "<group>"; };
 		28B632E01F71552D00F35212 /* MadridActivities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MadridActivities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B632E31F71552D00F35212 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,12 +96,15 @@
 		28B93D511F7D068800343355 /* SaveAllActivitiesInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAllActivitiesInteractorImpl.swift; sourceTree = "<group>"; };
 		28B93D531F7D283500343355 /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
 		28B93D551F7D37DB00343355 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		28CB77361F87D2AA00EFE109 /* MapAndShopsViewController+MKMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapAndShopsViewController+MKMapViewDelegate.swift"; sourceTree = "<group>"; };
+		28CB77381F87E72200EFE109 /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = images.png; sourceTree = "<group>"; };
+		28CBE7091F893CAA00A85808 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		28EE87A11F72C53600CCCB84 /* 101-dumbbell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "101-dumbbell.png"; sourceTree = "<group>"; };
 		28EE87A21F72C53600CCCB84 /* 101-bank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "101-bank.png"; sourceTree = "<group>"; };
 		28EE87A51F72CA8400CCCB84 /* MapAndShopsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAndShopsViewController.swift; sourceTree = "<group>"; };
 		28EE87A71F72EA1B00CCCB84 /* ShopCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCollectionViewCell.swift; sourceTree = "<group>"; };
 		28EE87A91F72EDDE00CCCB84 /* ActivityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCollectionViewCell.swift; sourceTree = "<group>"; };
-		28EE87AC1F72F13E00CCCB84 /* String+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Image.swift"; sourceTree = "<group>"; };
+		28EE87AC1F72F13E00CCCB84 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		28EE87AE1F72F50D00CCCB84 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		28EE87B01F72F60600CCCB84 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		28EE87B21F72F76C00CCCB84 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
@@ -108,7 +121,7 @@
 		28F03F3E1F7A5AC1004867E8 /* ExecuteOnceInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteOnceInteractorImpl.swift; sourceTree = "<group>"; };
 		28F03F3F1F7A5AC2004867E8 /* ExecuteOnceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteOnceInteractor.swift; sourceTree = "<group>"; };
 		28F03F461F7A677E004867E8 /* ShopDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailViewController.swift; sourceTree = "<group>"; };
-		28F03F481F7A8951004867E8 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		28F03F481F7A8951004867E8 /* NoteShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteShop.swift; sourceTree = "<group>"; };
 		7A174227347737E77AF543C2 /* Pods-MadridActivities.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MadridActivities.release.xcconfig"; path = "Pods/Target Support Files/Pods-MadridActivities/Pods-MadridActivities.release.xcconfig"; sourceTree = "<group>"; };
 		DDC12F502C1676F6AF8978C9 /* Pods_MadridActivities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MadridActivities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD72FFE6371F375D0261A2A7 /* Pods-MadridActivities.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MadridActivities.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MadridActivities/Pods-MadridActivities.debug.xcconfig"; sourceTree = "<group>"; };
@@ -230,6 +243,9 @@
 				28F03F371F7A5917004867E8 /* MapAndShopsViewController+CollectionViewController.swift */,
 				28F03F461F7A677E004867E8 /* ShopDetailViewController.swift */,
 				28B93D531F7D283500343355 /* ActivityDetailViewController.swift */,
+				2863042B1F87C15D00089A09 /* MapAndActivitiesViewController+MKMapViewDelegate.swift */,
+				28CB77361F87D2AA00EFE109 /* MapAndShopsViewController+MKMapViewDelegate.swift */,
+				281635FA1FAC8A0A003F9336 /* InitialViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -241,7 +257,8 @@
 				28B632EC1F71552D00F35212 /* LaunchScreen.storyboard */,
 				28EE87A71F72EA1B00CCCB84 /* ShopCollectionViewCell.swift */,
 				28EE87A91F72EDDE00CCCB84 /* ActivityCollectionViewCell.swift */,
-				28F03F481F7A8951004867E8 /* Note.swift */,
+				28F03F481F7A8951004867E8 /* NoteShop.swift */,
+				2863042D1F87CA4000089A09 /* NoteActivity.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -249,6 +266,7 @@
 		28EE879A1F72C1C700CCCB84 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				28CB77381F87E72200EFE109 /* images.png */,
 				28EE87A21F72C53600CCCB84 /* 101-bank.png */,
 				28EE87A11F72C53600CCCB84 /* 101-dumbbell.png */,
 			);
@@ -258,9 +276,11 @@
 		28EE87AB1F72F13000CCCB84 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				28EE87AC1F72F13E00CCCB84 /* String+Image.swift */,
+				28EE87AC1F72F13E00CCCB84 /* String.swift */,
 				28151F2D1F791A8400E23CAF /* Typealias.swift */,
 				28EE87AE1F72F50D00CCCB84 /* CoreDataStack.swift */,
+				28CBE7091F893CAA00A85808 /* Reachability.swift */,
+				281635F81FAC81E6003F9336 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -470,6 +490,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28CB77371F87D2AA00EFE109 /* MapAndShopsViewController+MKMapViewDelegate.swift in Sources */,
+				281635F91FAC81E6003F9336 /* Constants.swift in Sources */,
 				28B93D541F7D283500343355 /* ActivityDetailViewController.swift in Sources */,
 				28EE87AF1F72F50D00CCCB84 /* CoreDataStack.swift in Sources */,
 				28B93D501F7D061C00343355 /* SaveAllActivitiesInteractor.swift in Sources */,
@@ -484,7 +506,8 @@
 				28B93D521F7D068800343355 /* SaveAllActivitiesInteractorImpl.swift in Sources */,
 				28151F2A1F791A1F00E23CAF /* DownloadAllShopsInteractor.swift in Sources */,
 				28B481DB1F79A2F500A0B0D8 /* MapShops.swift in Sources */,
-				28EE87AD1F72F13E00CCCB84 /* String+Image.swift in Sources */,
+				28CBE70A1F893CAA00A85808 /* Reachability.swift in Sources */,
+				28EE87AD1F72F13E00CCCB84 /* String.swift in Sources */,
 				28F03F451F7A5B40004867E8 /* SaveAllShopsInteractor.swift in Sources */,
 				28B632E61F71552D00F35212 /* MapAndActivitiesViewController.swift in Sources */,
 				28EE87A81F72EA1B00CCCB84 /* ShopCollectionViewCell.swift in Sources */,
@@ -492,10 +515,13 @@
 				28F03F421F7A5AC2004867E8 /* ExecuteOnceInteractorImpl.swift in Sources */,
 				28B93D4E1F7CFBBF00343355 /* MapActivities.swift in Sources */,
 				28F03F431F7A5AC2004867E8 /* ExecuteOnceInteractor.swift in Sources */,
-				28F03F491F7A8951004867E8 /* Note.swift in Sources */,
+				28F03F491F7A8951004867E8 /* NoteShop.swift in Sources */,
 				28EE87B31F72F76D00CCCB84 /* Shop.swift in Sources */,
+				281635FB1FAC8A0A003F9336 /* InitialViewController.swift in Sources */,
+				2863042E1F87CA4000089A09 /* NoteActivity.swift in Sources */,
 				28F03F441F7A5B3A004867E8 /* SaveAllShopsInteractorImpl.swift in Sources */,
 				28EE87BE1F7309DD00CCCB84 /* Activities.swift in Sources */,
+				2863042C1F87C15D00089A09 /* MapAndActivitiesViewController+MKMapViewDelegate.swift in Sources */,
 				28EE87B61F72FA7F00CCCB84 /* MadridShopsActivities.xcdatamodeld in Sources */,
 				28151F2E1F791A8400E23CAF /* Typealias.swift in Sources */,
 				28F03F411F7A5AC2004867E8 /* SetExecutedOnceInteractorImpl.swift in Sources */,

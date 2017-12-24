@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  String.swift
 //  MadridActivities
 //
 //  Created by Carlos Ledesma on 20/9/17.
@@ -9,6 +9,8 @@ import UIKit
 
 extension String {
     
+    /* DEPRECATED -> Usamos ahora SDWebImage para cargar las imágenes
+     Pero es un buen ejemplo de carga asíncrona
     func loadImage(into imageView: UIImageView)  {
         let queue = OperationQueue()
         
@@ -22,7 +24,7 @@ extension String {
                 }
             }
         }
-    }
+    }*/
     
     func trimAndConvertToFloat() -> Float {
         return Float(self.trimmingCharacters(in: .whitespaces)) ?? 0.0

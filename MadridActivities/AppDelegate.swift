@@ -15,19 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var cds = CoreDataStack()
     var context : NSManagedObjectContext?
-
+    let reachability = Reachability()!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         self.context = cds.createContainter(dbName: "MadridShopsActivities").viewContext
-        let tabBar = self.window?.rootViewController as! UITabBarController
-        let navActivities = tabBar.viewControllers![0] as! UINavigationController
-        let mapAndActivitiesVC = navActivities.topViewController as! MapAndActivitiesViewController
-        let navShops = tabBar.viewControllers![1] as! UINavigationController
-        let mapAndShopsVC = navShops.topViewController as! MapAndShopsViewController
-        mapAndShopsVC.context = context
-        mapAndActivitiesVC.context = context
+        
+        let rootVC = self.window?.rootViewController as! InitialViewController
+        rootVC.context = context
         
         return true
     }
@@ -36,6 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard let context = self.context else { return }
         self.cds.saveContext(context: context)
     }
+    
+    
 
 
 }
